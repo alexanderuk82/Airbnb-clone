@@ -11,7 +11,6 @@ import Input from '../inputs/input';
 import { toast } from 'react-hot-toast';
 import Button from '../Button';
 
-
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
   const [isLoading, setIsLoading] = useState(false);
@@ -79,17 +78,31 @@ const RegisterModal = () => {
     </div>
   );
 
-  const footerContent = (  
+  const footerContent = (
     <div className="flex flex-col gap-4 mt-2 ">
-        <hr />
-        <Button 
-          outline
-          label =' Continue with Google'
-          icon = {FcGoogle}
-          onClick={() => {}}
-        />
+      <hr />
+      <Button
+        outline
+        label=" Continue with Google"
+        icon={FcGoogle}
+        onClick={() => {}}
+      />
+      <Button
+        outline
+        label=" Continue with Github"
+        icon={AiFillGithub}
+        onClick={() => {}}
+      />
+      <div className="text-neutral-500 text-center font-light">
+       <div className="flex flex-row items-center justify-center gap-8  hover:cursor-pointer">
+         <div>Already have an account? </div>
+         <div className="text-neutral-800 hover:underline font-medium"
+          onClick={registerModal.onClose}
+         >Login</div>
+       </div>
+      </div>
     </div>
-  )
+  );
   return (
     <Modal
       disabled={isLoading}
