@@ -10,6 +10,7 @@ import Heading from '../Heading';
 import Input from '../inputs/input';
 import { toast } from 'react-hot-toast';
 import Button from '../Button';
+import { BiVolumeLow } from 'react-icons/bi';
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -74,6 +75,7 @@ const RegisterModal = () => {
         register={register}
         errors={errors}
         required
+        
       />
     </div>
   );
@@ -118,3 +120,8 @@ const RegisterModal = () => {
 };
 
 export default RegisterModal;
+
+
+
+
+ 
